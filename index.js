@@ -1,7 +1,9 @@
-function handleFormSubmission(event) {
+function handleFormSubmission(
+  event,
+  form = document.querySelector('#contact_us_form'),
+) {
   event.preventDefault()
 
-  const form = document.querySelector('#contact_us_form')
   const { name, email, question, severity } = form
 
   const contactUsData = {
@@ -17,5 +19,9 @@ function handleFormSubmission(event) {
     },
   }
 
-  DirectlyRTM('askQuestion', contactUsData)
+  console.log('Severity: ', severity.value)
+
+  if (severity.value === 'Low' || severity.value === 'Medium') {
+    DirectlyRTM('askQuestion', contactUsData)
+  }
 }
