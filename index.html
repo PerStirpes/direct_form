@@ -15,7 +15,7 @@
     !function () {
       var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
         analytics.invoked = !0; analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on" ]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[ t ]; analytics[ e ] = analytics.factory(e) } analytics.load = function (t, e) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var a = document.getElementsByTagName("script")[ 0 ]; a.parentNode.insertBefore(n, a); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.1.0";
-        analytics.load("ADD KEY HERE");
+        analytics.load("bvcFHB12YaeJTv7fZzQf9HRYDl5ByVjs");
         analytics.page();
       }
     }();
@@ -33,53 +33,57 @@
           </svg></a>
       </div>
       <div>
-        <a href="/one" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">One</a>
+        <a href="https://github.com/PerStirpes/direct_form" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Github</a>
         <a href="https://developer.directly.com/rtm.html" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Docs</a>
       </div>
     </nav>
   </header>
 
   <main role="main">
+    <div class="font-sans flex items-center h-screen w-full bg-teal-lighter">
+      <div class="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
+        <h1 class="block w-full text-center text-grey-darkest mb-6">Contact Us</h1>
 
-  </main>
-  <div class="font-sans flex items-center h-screen w-full bg-teal-lighter">
-    <div class="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
-      <h1 class="block w-full text-center text-grey-darkest mb-6">Contact Us</h1>
-      <form class="mb-4 md:flex md:flex-wrap md:justify-between" id='contact_us_form' method="post" onsubmit="handleFormSubmission(event)">
-        <div class="field-group mb-4 md:w-full">
-          <label class="field-label" for="name">Name</label>
-          <input class="field shadow leading-tight focus:outline-none focus:shadow-outline" type="text" name="name" id="name"
-            required>
-        </div>
+        <form class="mb-4 md:flex md:flex-wrap md:justify-between" id='contact_us_form' method="post" onsubmit="handleFormSubmission(event)">
 
-        <div class="field-group mb-4 md:w-full">
-          <label class="field-label" for="email">Email</label>
-          <input class="field shadow leading-tight focus:outline-none focus:shadow-outline" type="email" name="email"
-            id="email" placeholder="enter email" required>
-        </div>
-        <div class="field-group mb-4 md:w-full">
-          <label class="field-label" for="severity">Choose Severity</label>
-          <select required class="field bg-white border border-grey-light hover:border-grey md:w-full shadow leading-tight focus:outline-none focus:shadow-outline"
-            id="severity" name="severity">
-            <option value="Low">Low</option>
-            <option value="Medium">Medium</option>
-            <option value="High">High</option>
-          </select>
+          <div class="field-group mb-4 md:w-full">
+            <label class="field-label" for="name">Name</label>
+            <input class="field shadow leading-tight focus:outline-none focus:shadow-outline" type="text" id="name"
+              required>
+          </div>
 
-        </div>
+          <div class="field-group mb-4 md:w-full">
+            <label class="field-label" for="email">Email</label>
+            <input class="field shadow leading-tight focus:outline-none focus:shadow-outline" type="email" id="email"
+              placeholder="enter email" required>
+          </div>
 
-        <div class="field-group mb-6 md:w-full">
-          <label class="field-label" for="question">Ask A Question</label>
-          <textarea class="field shadow leading-tight focus:outline-none focus:shadow-outline" name="question" id="question"
-            placeholder="What's on your mind? Describe your issue here" rows="6" required></textarea>
-        </div>
-        <button class="btn btn-teal mx-auto" type="submit">Submit</button>
-      </form>
-      <a class="link link-grey w-full text-center" href="/status">Already asked a question? Check Status</a>
+          <div class="field-group mb-4 md:w-full">
+            <label class="field-label" for="severity">Choose Severity</label>
+            <select required class="field bg-white border border-grey-light hover:border-grey md:w-full shadow leading-tight focus:outline-none focus:shadow-outline"
+              id="severity">
+              <option value="Low">Low</option>
+              <option value="Medium">Medium</option>
+              <option value="High">High</option>
+            </select>
+          </div>
+
+          <div class="field-group mb-6 md:w-full">
+            <label class="field-label" for="question">Ask A Question</label>
+            <textarea class="field shadow leading-tight focus:outline-none focus:shadow-outline" id="question"
+              placeholder="What's your issue?" rows="6" autocapitalize="sentences" required></textarea>
+          </div>
+
+          <button class="btn btn-teal mx-auto" type="submit">Submit</button>
+
+        </form>
+
+      </div>
     </div>
-  </div>
+  </main>
+
   <footer></footer>
-  <script src="index.js"></script>
+
   <script>
     (function (d, i, r, e, c, t, l, y) {
       i[ r ] = i[ r ] || function () {
@@ -102,6 +106,7 @@
       id: "2c9985ab668037e00166b31c796134ef",
     });
   </script>
+  <script src="index.js"></script>
 </body>
 
 
