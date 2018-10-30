@@ -9,11 +9,11 @@
 /* Here we can add our own utilities or custom CSS */
 
 .field {
-    @apply .border .py-2 .px-3 .text-grey-darkest;
+    @apply .border .py-2 .px-3 .text-grey-darkest .shadow .leading-tight;
 }
 
 .field-label {
-    @apply .uppercase .font-bold .text-lg .text-grey-darkest .mb-2;
+    @apply .uppercase .font-bold .text-lg .text-grey-darkest .mb-2 ;
 }
 
 .field-group {

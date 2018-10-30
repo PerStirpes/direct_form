@@ -6207,6 +6207,8 @@ table {
   padding-left: .75rem;
   padding-right: .75rem;
   color: #3d4852;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .1);
+  line-height: 1.25;
 }
 
 .field-label {

@@ -29,12 +29,11 @@
   <header role="banner">
     <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline">
       <div class="mb-2 sm:mb-0">
-        <a href="/home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark">Home</a>
+        <a href="https://directly.com/" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark">Home</a>
       </div>
       <div>
         <a href="/one" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">One</a>
-        <a href="/two" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Two</a>
-        <a href="/three" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Three</a>
+        <a href="https://developer.directly.com/rtm.html" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Docs</a>
       </div>
     </nav>
   </header>
@@ -45,20 +44,33 @@
   <div class="font-sans flex items-center h-screen w-full bg-teal-lighter">
     <div class="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
       <h1 class="block w-full text-center text-grey-darkest mb-6">Contact Us</h1>
-      <form class="mb-4 md:flex md:flex-wrap md:justify-between" action="/" method="post">
+      <form class="mb-4 md:flex md:flex-wrap md:justify-between" id='contact_us_form' method="post" onsubmit="handleFormSubmission(event)">
         <div class="field-group mb-4 md:w-full">
-          <label class="field-label" for="first_name">Name</label>
-          <input class="field" type="text" name="first_name" id="first_name">
+          <label class="field-label" for="name">Name</label>
+          <input class="field shadow leading-tight focus:outline-none focus:shadow-outline" type="text" name="name" id="name"
+            required>
         </div>
 
         <div class="field-group mb-4 md:w-full">
           <label class="field-label" for="email">Email</label>
-          <input class="field" type="email" name="email" id="email" placeholder="use your real email">
+          <input class="field shadow leading-tight focus:outline-none focus:shadow-outline" type="email" name="email"
+            id="email" placeholder="enter email" required>
         </div>
+        <div class="field-group mb-4 md:w-full">
+          <label class="field-label" for="severity">Choose Severity</label>
+          <select required class="field bg-white border border-grey-light hover:border-grey md:w-full shadow leading-tight focus:outline-none focus:shadow-outline"
+            id="severity" name="severity">
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+
+        </div>
+
         <div class="field-group mb-6 md:w-full">
           <label class="field-label" for="question">Ask A Question</label>
-          <textarea class="field" name="question" id="question" placeholder="What's on your mind? Describe your issue here"
-            rows="6"></textarea>
+          <textarea class="field shadow leading-tight focus:outline-none focus:shadow-outline" name="question" id="question"
+            placeholder="What's on your mind? Describe your issue here" rows="6" required></textarea>
         </div>
         <button class="btn btn-teal mx-auto" type="submit">Submit</button>
       </form>
@@ -85,9 +97,12 @@
         i.attachEvent("onload", function () { y.appendChild(l); });
       }
     })(document, window, "DirectlyRTM", "https://directly.com/widgets/rtm/embed.js");
-    DirectlyRTM("config", { id: "2c9985ab668037e00166b31c796134ef" });
-
+    DirectlyRTM("config", {
+      id: "2c9985ab668037e00166b31c796134ef",
+    });
   </script>
 </body>
+
+
 
 </html>
