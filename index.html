@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Contact Us</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@2_up" />
+  <link rel="shortcut icon" href="https://directly.com/wp-content/themes/directly/assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="static/main.css" />
+  <script>
+    !function () {
+      var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
+        analytics.invoked = !0; analytics.methods = [ "trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on" ]; analytics.factory = function (t) { return function () { var e = Array.prototype.slice.call(arguments); e.unshift(t); analytics.push(e); return analytics } }; for (var t = 0; t < analytics.methods.length; t++) { var e = analytics.methods[ t ]; analytics[ e ] = analytics.factory(e) } analytics.load = function (t, e) { var n = document.createElement("script"); n.type = "text/javascript"; n.async = !0; n.src = "https://cdn.segment.com/analytics.js/v1/" + t + "/analytics.min.js"; var a = document.getElementsByTagName("script")[ 0 ]; a.parentNode.insertBefore(n, a); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.1.0";
+        analytics.load("ADD KEY HERE");
+        analytics.page();
+      }
+    }();
+  </script>
+</head>
+
+<body>
+
+
+
+  <header role="banner">
+    <nav class="font-sans flex flex-col text-center sm:flex-row sm:text-left sm:justify-between py-4 px-6 bg-white shadow sm:items-baseline">
+      <div class="mb-2 sm:mb-0">
+        <a href="/home" class="text-2xl no-underline text-grey-darkest hover:text-blue-dark">Home</a>
+      </div>
+      <div>
+        <a href="/one" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">One</a>
+        <a href="/two" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Two</a>
+        <a href="/three" class="text-lg no-underline text-grey-darkest hover:text-blue-dark ml-2">Three</a>
+      </div>
+    </nav>
+  </header>
+
+  <main role="main">
+
+  </main>
+  <div class="font-sans flex items-center h-screen w-full bg-teal-lighter">
+    <div class="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
+      <h1 class="block w-full text-center text-grey-darkest mb-6">Contact Us</h1>
+      <form class="mb-4 md:flex md:flex-wrap md:justify-between" action="/" method="post">
+        <div class="field-group mb-4 md:w-full">
+          <label class="field-label" for="first_name">Name</label>
+          <input class="field" type="text" name="first_name" id="first_name">
+        </div>
+
+        <div class="field-group mb-4 md:w-full">
+          <label class="field-label" for="email">Email</label>
+          <input class="field" type="email" name="email" id="email" placeholder="use your real email">
+        </div>
+        <div class="field-group mb-6 md:w-full">
+          <label class="field-label" for="question">Ask A Question</label>
+          <textarea class="field" name="question" id="question" placeholder="What's on your mind? Describe your issue here"
+            rows="6"></textarea>
+        </div>
+        <button class="btn btn-teal mx-auto" type="submit">Submit</button>
+      </form>
+      <a class="link link-grey w-full text-center" href="/status">Already asked a question? Check Status</a>
+    </div>
+  </div>
+  <footer></footer>
+  <script src="index.js"></script>
+  <script>
+    (function (d, i, r, e, c, t, l, y) {
+      i[ r ] = i[ r ] || function () {
+        (i[ r ].cq = i[ r ].cq || []).push(arguments)
+      };
+      l = d.createElement("script");
+      l.id = "directlyRTMScript";
+      l.src = e;
+      l.async = 1;
+      y = d.head || d.getElementsByTagName("head")[ 0 ];
+      if (d.readyState === "complete" || d.readyState === "loaded" || d.readyState === "interactive") {
+        y.appendChild(l);
+      } else if (i.addEventListener) {
+        i.addEventListener("DOMContentLoaded", function () { y.appendChild(l); });
+      } else {
+        i.attachEvent("onload", function () { y.appendChild(l); });
+      }
+    })(document, window, "DirectlyRTM", "https://directly.com/widgets/rtm/embed.js");
+    DirectlyRTM("config", { id: "2c9985ab668037e00166b31c796134ef" });
+
+  </script>
+</body>
+
+</html>

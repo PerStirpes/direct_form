@@ -1,0 +1,18 @@
+{
+  "name": "form-directly",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha test/*"
+  },
+  "author": "Matt Barraza-Carl <mbarrazacarl@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-preset-react-app": "lastest",
+    "eslint": "lastest",
+    "mocha": "lastest",
+    "modern-normalize": "lastest",
+    "tailwindcss": "^0.6.6"
+  }
+}
