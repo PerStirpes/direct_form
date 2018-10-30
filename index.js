@@ -11,12 +11,13 @@ function handleFormSubmission(event) {
     metadata: {
       source_page: window.location.href,
       date: new Date().toDateString(),
-      servity: severity.value,
+      severity: severity.value,
       simple_name: name.value.split(' ').length > 1 ? false : true,
     },
   }
 
-  console.log('Severity: ', severity.value)
+  console.log('%c⚠️', 'font-size: 10em')
+  console.log('Check out the contact us data: ', contactUsData)
 
   if (severity.value === 'Low' || severity.value === 'Medium') {
     DirectlyRTM('askQuestion', contactUsData)
