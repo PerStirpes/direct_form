@@ -1,18 +1,18 @@
-function handleFormSubmission(event) {
-  event.preventDefault()
-  const form = document.querySelector('#contact_us_form')
-  const { name, email, question, severity } = form
+function handleFormSubmission(evt) {
+  evt.preventDefault()
+  let form = document.querySelector('#contact_us_form')
+  let { name, email, question, severity } = form
 
   const contactUsData = {
-    name: name.value.trim(),
-    email: email.value,
-    questionText: question.value,
+    name: trimName(name),
+    email: getEmail(email),
+    questionText: getQuestionText(question),
     id: '2c9985ab668037e00166b31c796134ef',
     metadata: {
-      source_page: window.location.href,
-      date: new Date().toDateString(),
-      severity: severity.value,
-      simple_name: name.value.split(' ').length > 1 ? false : true,
+      source_page: getURL(),
+      date: getDate(),
+      severity: getSeverity(severity),
+      simple_name: countNameLength(name),
     },
   }
 
@@ -24,4 +24,32 @@ function handleFormSubmission(event) {
   }
 
   form.reset()
+}
+
+function countNameLength(name) {
+  return name.value.trim().split(' ').length > 1 ? false : true
+}
+
+function trimName(name) {
+  return name.value.trim()
+}
+
+function getDate() {
+  return new Date().toDateString()
+}
+
+function getURL() {
+  return window.location.href
+}
+
+function getEmail(email) {
+  return email.value
+}
+
+function getSeverity(severity) {
+  return severity.value
+}
+
+function getQuestionText(question) {
+  return question.value
 }
